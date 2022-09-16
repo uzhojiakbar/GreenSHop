@@ -6,9 +6,23 @@ import trashicon from '../../Assets/img/trash.png'
 class ShopSection extends Component {
     constructor(props) {
         super(props)
+        this.state = {
+            counter: 0,
+        };
+        this.plus = this.plus.bind(this)
+        this.minus = this.minus.bind(this)
+    }
+    plus() {
+        this.setState({ counter: this.state.counter+1})
+    }
+    minus() {
+        this.setState({ counter: this.state.counter > 0? this.state.counter - 1 : this.state.counter })
+    }
+    delete(){
+        
     }
     render() {
-        let quantity = 0
+        console.log(this.desc);
         let pr = this.props
         return (
             <div className="ShopCard">
@@ -25,13 +39,15 @@ class ShopSection extends Component {
                     {pr.price} $
                 </p>
                 <p className="quantity">
-                    {quantity}
+                    <button onClick={this.plus}>+</button>
+                    {this.state.counter}
+                    <button onClick={this.minus}>-</button>
                 </p>
                 <p className="total">
-                    {pr.price * quantity}
+                    {pr.price * this.state.counter}$
                 </p>
                 <button className='trash'>
-                <img src={trashicon} alt="" />
+                    <img src={trashicon} alt="" />
                 </button>
             </div>
         )

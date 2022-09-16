@@ -10,6 +10,7 @@ export let Products = [
         title: 'Barberton Daisy',
         SKU: '1995751877966',
         price: 119,
+        quantity: 0,
     },
     {
         id: 2,
@@ -17,6 +18,7 @@ export let Products = [
         title: 'Blushing Bromeliad',
         SKU: '19957518757065',
         price: 139,
+        quantity: 0,
     },
     {
         id: 3,
@@ -24,6 +26,7 @@ export let Products = [
         title: 'Aluminum Plant',
         SKU: '1995751877786',
         price: 179,
+        quantity: 0,
     },
 ]
 

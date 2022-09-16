@@ -1,9 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .ShopCard {
     background-color: #FBFBFB;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
+    grid-template-columns: 1.5fr 1fr 0.5fr 1fr 0.5fr;
     align-items: center;
+    gap: 20px;
     text-align: center;
+}
+
+
+.img>img {
+    width: 80%;
 }
 
 .name {
@@ -31,4 +43,31 @@
     font-size: 16px;
     line-height: 16px;
     color: #3D3D3D;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.quantity>button {
+    width: 30.71px;
+    height: 30.71px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    text-align: center;
+    outline: none;
+    border-radius: 100%;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    cursor: pointer;
+}
+
+.quantity>button:hover{
+    transform: scale(0.95);
+}
+.quantity>button:active{
+    transform: scale(0.9);
 }
