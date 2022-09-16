@@ -5,7 +5,6 @@ import './style.css'
 
 class ShopPage extends Component {
     render() {
-        console.log(Products);
         return (
             <div className="Main">
                 <div className="ShopProducts">

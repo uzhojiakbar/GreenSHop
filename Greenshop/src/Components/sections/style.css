@@ -52,6 +52,16 @@
     justify-content: center;
 }
 
+
+.total {
+    font-family: 'Cera Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: #46A358;
+}
+
 .quantity>button {
     width: 30.71px;
     height: 30.71px;
@@ -65,9 +75,11 @@
     cursor: pointer;
 }
 
-.quantity>button:hover{
+.quantity>button:hover {
     transform: scale(0.95);
 }
-.quantity>button:active{
+
+.quantity>button:active {
     transform: scale(0.9);
 }
+

@@ -2,7 +2,6 @@ import img1 from '../Assets/img/img1.png'
 import img2 from '../Assets/img/img2.png'
 import img3 from '../Assets/img/img3.png'
 
-
 export let Products = [
     {
         id: 1,

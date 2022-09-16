@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Products from "../../Mock/data";
 import './style.css'
 import trashicon from '../../Assets/img/trash.png'
 
@@ -8,22 +7,27 @@ class ShopSection extends Component {
         super(props)
         this.state = {
             counter: 0,
+            total: this.all,
+            subtotal: 0,
         };
-        this.plus = this.plus.bind(this)
-        this.minus = this.minus.bind(this)
-    }
-    plus() {
-        this.setState({ counter: this.state.counter+1})
-    }
-    minus() {
-        this.setState({ counter: this.state.counter > 0? this.state.counter - 1 : this.state.counter })
-    }
-    delete(){
-        
     }
     render() {
-        console.log(this.desc);
-        let pr = this.props
+        let totalprice = this.props.price * this.state.counter;
+        let all = 0
+        let pr = this.props;
+        let pluss = () => {
+            this.setState({
+                counter: this.state.counter + 1,
+                subtotal: all+= totalprice
+            })
+        }
+        let minuss = () => {
+            this.setState({
+                counter: this.state.counter > 0 ? this.state.counter - 1 : this.state.counter,
+            }
+            )
+
+        }
         return (
             <div className="ShopCard">
                 <div className="name">
@@ -39,19 +43,22 @@ class ShopSection extends Component {
                     {pr.price} $
                 </p>
                 <p className="quantity">
-                    <button onClick={this.plus}>+</button>
+                    <button onClick={pluss}>+</button>
                     {this.state.counter}
-                    <button onClick={this.minus}>-</button>
+                    <button onClick={minuss}>-</button>
                 </p>
                 <p className="total">
-                    {pr.price * this.state.counter}$
+                    {/* {this.state.counter * pr.price}$ */}
+                    {totalprice}$
                 </p>
                 <button className='trash'>
                     <img src={trashicon} alt="" />
                 </button>
+                {all}
+                {console.log(all)}
+
             </div>
         )
     }
 }
-
 export default ShopSection;
