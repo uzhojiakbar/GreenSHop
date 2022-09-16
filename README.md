@@ -1,1 +1,1 @@
-Mail: **uzhojiakbar3@gmail.com
+Mail: uzhojiakbar3@gmail.com
